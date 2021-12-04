@@ -9,15 +9,21 @@
 - path : ログファイルのパス
 
 ## 実行
-1. notify.sh　内の上記設定項目を更新する．
+1. notify.sh　内の上記設定項目を更新．
 
 2. notify.sh に実行権限を与える．
 （例）notify.sh のあるディレクトリで下記コマンドを実行．
-```
+```sh
 chmod a+x notify.sh
 ```
 
 3. notify.sh のあるディレクトリで下記コマンドを実行．
-```
+```sh
 bash notify.sh
+```
+
+実行後に下記メッセージが出ることがありますが，
+直近でのログインがないことを示しており正常に動作しています．
+```
+{"message": "Cannot send an empty message", "code": 50006}
 ```
