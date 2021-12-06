@@ -1,12 +1,20 @@
 # 利用方法
+## 概要
 本スクリプトは，bash のみを利用して，
 マイクラサーバーへの JOIN と LEFT を監視しディスコードへ通知するものです．
 
-## 設定項目
+## 準備
+1. token.txt の作成
+```
+echo <webhook url> token.txt
+```
+2. path.txt の作成
+```
+echo <latest.log の path> token.txt
+```
+3. 通知の実行間隔はデフォルトで300[sec].
+notify.sh 内の span で管理している．
 
-- span : 実行間隔 [sec]
-- url  : ディスコードのウェブフックURL
-- path : ログファイルのパス
 
 ## 実行
 1. notify.sh　内の上記設定項目を更新．
