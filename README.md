@@ -6,11 +6,11 @@
 ## 準備
 1. token.txt の作成
 ```
-echo <webhook url> token.txt
+echo [webhook url] > token.txt
 ```
 2. path.txt の作成
 ```
-echo <latest.log の path> token.txt
+echo [latest.logのpath] > token.txt
 ```
 3. 通知の実行間隔はデフォルトで300[sec].
 notify.sh 内の span で管理している．
