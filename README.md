@@ -21,9 +21,3 @@ chmod a+x notify.sh
 ```sh
 bash notify.sh
 ```
-
-実行後に下記メッセージが出ることがありますが，
-直近でのログインがないことを示しており正常に動作しています．
-```
-{"message": "Cannot send an empty message", "code": 50006}
-```
