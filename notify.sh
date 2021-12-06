@@ -1,15 +1,18 @@
 #!/bin/bash
 
-# ログファイルパス
-path=/data/logs/latest.log
-
 # 間隔の指定 [s]
 span=300
 
+# ログファイルパス
+path=$(cat ./path.txt)
+
+# Discord トークン
+url=$(cat ./token.txt)
+
 # notifyer
 notify(){
-  url=<URL>
-  curl -H "Content-Type: application/json" -X POST -d '{"username": "minecraftBot", "content":"'"$1"'"}' "$url"
+  echo $2
+  curl -H "Content-Type: application/json" -X POST -d '{"username": "minecraftBot", "content":"'"$1"'"}' "$2"
 }
 
 # hh:mm:dd を 秒 に変換
@@ -45,6 +48,7 @@ while true; do
       if [[ $line == *left\ the\ game* ]]; then LINES+="$line \n" ; fi
     fi
   done
+  echo $(date)
   echo "$LINES"
 
   # ファイル更新が span 以内の場合に通知を行う
@@ -52,7 +56,7 @@ while true; do
   var_f=$(date -r $path +%s)
   if [ $((var_f0-var_f)) -le $span ] ; then
     # notify
-    notify "$LINES"
+    notify "$LINES" "$url"
   fi
 
   # 一定時間待機
