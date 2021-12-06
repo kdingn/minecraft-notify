@@ -8,8 +8,7 @@ span=300
 
 # notifyer
 notify(){
-  url=https://discord.com/api/webhooks/916524788762157076/nwYp9qKZvuvQZlB253STJ0USKOQrO9-rFO3ZRilxoZ3qyfRZQvNXZ_8BD9OZb1Xhp_4a
-  #url=https://discord.com/api/webhooks/915626907914108939/YOzhShq33Iw9oUCYeOJUqfVb9LjI_wE2m2Gi6ubFvX-6MLN5EnLsuetwAkunfN8eTN1U
+  url=<URL>
   curl -H "Content-Type: application/json" -X POST -d '{"username": "minecraftBot", "content":"'"$1"'"}' "$url"
 }
 
