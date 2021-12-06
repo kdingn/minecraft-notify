@@ -38,7 +38,7 @@ while true; do
   while read line; do
     # now - log
     var_l=$(seconds ${line:1:8})
-    var_s=$(($var_t - $var_l))
+    var_s=$((var_t-var_l))
     if [ $var_s -le 0 ] ; then
       var_s=$((var_s + 24*3600))
     fi
