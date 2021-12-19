@@ -13,7 +13,7 @@ echo [webhook url] > token.txt
 echo [latest.logのpath] > token.txt
 ```
 3. 通知の実行間隔はデフォルトで300[sec].
-notify.sh 内の span で管理している．
+notify.sh 内の span で管理しています．
 
 
 ## 実行
